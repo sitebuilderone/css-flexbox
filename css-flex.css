@@ -1,53 +1,72 @@
-*
-{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
 .flex-container
 {
   display: flex;
   background-color: #ebebeb;
   height: 400px;
-
-  /* Alignment */
-  
+  /* Alignment */  
   /* up & down */
   flex-direction: column;
   /* vertical */
   flex-direction: row;
-
- 
-  
   /* justify things in container */
   justify-content: end;
   justify-content: center;
   justify-content: space-around;
   justify-content: space-between;
   justify-content: space-evenly;
-
   /* align */
   align-items: start;
   align-items: center;
-  
+  /* use to fit box on responsiveness */
+  flex-wrap: wrap;
 }
-
 .item
 {
+  /*
   width: 100px;
+  flex-basis: 100px;
+  */
+  
+  /*
+  flex grow, flex shrink, flex basis
+  */
+  flex: 1 0 100px;
+  /*
+  flex-grow:1;
+  */
   height: 100px;
   background: #00703c;
   margin: 10px;
   color: white;
   font-weight: bold;
-
   /* text */
   display: flex;
   justify-content: center;
   align-items: center;
-
-
+}
+/* change order of items */
+.item:nth-of-type(1)
+{
+  order: 3;
+  flex-grow: 2;
+  flex-basis: 120px;
+  
+}
+.item:nth-of-type(2)
+{
+  order: 1;
+  flex-grow: 1;
+  
+}
+.item:nth-of-type(3)
+{
+  order: 2;
+  flex-basis: 150px;
 }
 
 
@@ -60,7 +79,6 @@
 {
   align-self: center;
 }
-
 .item:nth-of-type(3)
 {
   align-self: end;
