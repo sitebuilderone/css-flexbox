@@ -9,6 +9,28 @@
 {
   display: flex;
   background-color: #ebebeb;
+  height: 400px;
+
+  /* Alignment */
+  
+  /* up & down */
+  flex-direction: column;
+  /* vertical */
+  flex-direction: row;
+
+ 
+  
+  /* justify things in container */
+  justify-content: end;
+  justify-content: center;
+  justify-content: space-around;
+  justify-content: space-between;
+  justify-content: space-evenly;
+
+  /* align */
+  align-items: start;
+  align-items: center;
+  
 }
 
 .item
@@ -19,4 +41,28 @@
   margin: 10px;
   color: white;
   font-weight: bold;
+
+  /* text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
 }
+
+
+/*
+.item:nth-of-type(1)
+{
+  align-self: start;
+}
+.item:nth-of-type(2)
+{
+  align-self: center;
+}
+
+.item:nth-of-type(3)
+{
+  align-self: end;
+}
+*/
